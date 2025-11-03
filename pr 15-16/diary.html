@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Дневник - Адаптивный сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header">
+            <nav class="nav" aria-label="Основная навигация">
+                <div class="nav-container">
+                    <a href="index.html" class="nav-logo">Логотип</a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                        <li><a href="diary.html" class="nav-link">Дневник</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main" class="main">
+            <!-- Герой секция для дневника -->
+            <section class="hero section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-greeting">Дневник разработки</h1>
+                        <p class="hero-description">Заметки о процессе изучения адаптивной вёрстки и современных технологий</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Сетка записей дневника -->
+            <section class="diary-entries section">
+                <div class="diary-container">
+                    <h2 class="section-title">Последние записи</h2>
+                    
+                    <div class="diary-grid">
+                        <article class="diary-entry">
+                            <header class="diary-entry-header">
+                                <time datetime="2025-01-15" class="diary-date">15 января 2025</time>
+                                <h3 class="diary-entry-title">Начало изучения контейнерных запросов</h3>
+                            </header>
+                            <div class="diary-entry-content">
+                                <p>Сегодня начал изучать контейнерные запросы. Очень мощная технология, которая позволяет компонентам адаптироваться к размеру своего контейнера, а не всего окна.</p>
+                                <div class="diary-image-container">
+                                    <img src="https://picsum.photos/600/300" 
+                                         alt="Пример контейнерных запросов" 
+                                         class="responsive-image"
+                                         loading="lazy">
+                                </div>
+                                <ul>
+                                    <li>container-type: inline-size</li>
+                                    <li>@container правила</li>
+                                    <li>Прогрессивное улучшение с @supports</li>
+                                </ul>
+                            </div>
+                            <footer class="diary-entry-footer">
+                                <span class="diary-tags">#CSS #CQ #Адаптивность</span>
+                            </footer>
+                        </article>
+
+                        <article class="diary-entry">
+                            <header class="diary-entry-header">
+                                <time datetime="2025-01-14" class="diary-date">14 января 2025</time>
+                                <h3 class="diary-entry-title">Оптимизация изображений для веба</h3>
+                            </header>
+                            <div class="diary-entry-content">
+                                <p>Исследовал различные форматы изображений и техники оптимизации. WebP и AVIF показывают отличные результаты по сжатию.</p>
+                                <div class="image-comparison">
+                                    <div class="comparison-item"><h4>JPEG vs WebP</h4>
+                                        <p>WebP экономит до 30% размера при том же качестве</p>
+                                    </div>
+                                    <div class="comparison-item">
+                                        <h4>PNG vs AVIF</h4>
+                                        <p>AVIF показывает лучшие результаты для изображений с прозрачностью</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="diary-entry-footer">
+                                <span class="diary-tags">#Images #Optimization #WebP</span>
+                            </footer>
+                        </article>
+
+                        <article class="diary-entry">
+                            <header class="diary-entry-header">
+                                <time datetime="2025-01-13" class="diary-date">13 января 2025</time>
+                                <h3 class="diary-entry-title">Доступность в веб-разработке</h3>
+                            </header>
+                            <div class="diary-entry-content">
+                                <p>Углубился в тему доступности. Ключевые моменты:</p>
+                                <div class="accessibility-tips">
+                                    <div class="tip">
+                                        <h4>Семантическая разметка</h4>
+                                        <p>Использование правильных HTML-тегов улучшает навигацию для скринридеров</p>
+                                    </div>
+                                    <div class="tip">
+                                        <h4>Цветовой контраст</h4>
+                                        <p>Соотношение минимум 4.5:1 для обычного текста</p>
+                                    </div>
+                                    <div class="tip">
+                                        <h4>Клавиатурная навигация</h4>
+                                        <p>Все интерактивные элементы должны быть доступны с клавиатуры</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="diary-entry-footer">
+                                <span class="diary-tags">#A11y #Accessibility #WCAG</span>
+                            </footer>
+                        </article>
+
+                        <article class="diary-entry">
+                            <header class="diary-entry-header">
+                                <time datetime="2025-01-12" class="diary-date">12 января 2025</time>
+                                <h3 class="diery-entry-title">Адаптивная типографика с clamp()</h3>
+                            </header>
+                            <div class="diary-entry-content">
+                                <p>Экспериментировал с функцией clamp() для создания плавно масштабирующейся типографики.</p>
+                                <pre><code>.heading {
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.5rem);
+}</code></pre>
+                                <p>Этот подход позволяет тексту плавно масштабироваться между минимальным и максимальным значениями.</p>
+                            </div>
+                            <footer class="diary-entry-footer">
+                                <span class="diary-tags">#CSS #Typography #Clamp</span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Форма добавления новой записи -->
+            <section class="new-entry section">
+                <div class="form-container">
+                    <h2 class="section-title">Добавить новую запись</h2>
+                    <form class="form diary-form">
+                        <div class="form-group">
+                            <label for="entry-title">Заголовок записи</label>

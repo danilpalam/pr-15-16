@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Адаптивный сайт - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header">
+            <nav class="nav" aria-label="Основная навигация">
+                <div class="nav-container">
+                    <a href="#" class="nav-logo">Логотип</a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                        <li><a href="diary.html" class="nav-link">Дневник</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main" class="main">
+            <!-- Герой-секция -->
+            <section class="hero section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-greeting">Добро пожаловать на наш сайт</h1>
+                        <p class="hero-description">Изучаем современные технологии адаптивной вёрстки</p>
+                    </div>
+                    <figure class="hero-image">
+                        <picture>
+                            <source
+                                type="image/avif"
+                                srcset="images/hero-150.avif 150w, images/hero-200.avif 200w, images/hero-300.avif 300w"
+                                sizes="200px">
+                            <source
+                                type="image/webp"
+                                srcset="images/hero-150.webp 150w, images/hero-200.webp 200w, images/hero-300.webp 300w"
+                                sizes="200px">
+                            <img class="hero-photo"
+                                src="images/photo_5206560730507840527_y.jpg"
+                                srcset="images/photo_5206560730507840527_y.jpg 150w, images/hero-200.jpg 200w, images/hero-300.jpg 300w"
+                                sizes="200px"
+                                width="200" height="200"
+                                alt="Портрет студента"
+                                fetchpriority="high">
+                        </picture>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Секция проектов с контейнерными запросами -->
+            <section class="projects-area section">
+                <h2 class="section-title">Наши проекты</h2>
+                <div class="projects-list">
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 1</h3>
+                        <p class="project-card-description">Описание первого проекта с демонстрацией адаптивности и современных технологий вёрстки.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 2</h3>
+                        <p class="project-card-description">Второй проект показывает работу с сетками и контейнерными запросами.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 3</h3>
+                        <p class="project-card-description">Третий проект демонстрирует адаптивные изображения и типографику.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 4</h3>
+                        <p class="project-card-description">Четвёртый проект посвящён доступности и семантической разметке.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 5</h3><p class="project-card-description">Пятый проект показывает работу с формами и интерактивными элементами.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-card-title">Проект 6</h3>
+                        <p class="project-card-description">Шестой проект демонстрирует оптимизацию производительности.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Демонстрация адаптивных изображений -->
+            <section class="images-demo section">
+                <h2 class="section-title">Адаптивные изображения</h2>
+                
+                <div class="image-techniques">
+                    <!-- Базовое адаптивное изображение -->
+                    <div class="technique">
+                        <h3>Базовое адаптивное изображение</h3>
+                        <div class="image-container">
+                            <img src="images/photo_1.jpg" , widht ="200"
+                                 alt="Демонстрационное изображение" 
+                                 class="responsive-image">
+                        </div>
+                    </div>
+
+                    <!-- Object-fit демонстрация -->
+                    <div class="technique">
+                        <h3>Object-fit свойства</h3>
+                        <div class="object-fit-demo">
+                            <div class="object-fit-item">
+                                <img src="images/photo_2.jpg" 
+                                     alt="Cover пример" 
+                                     class="object-fit-cover">
+                                <span>object-fit: cover</span>
+                            </div>
+                            <div class="object-fit-item">
+                                <img src="images/photo_3.jpg" 
+                                     alt="Contain пример" 
+                                     class="object-fit-contain">
+                                <span>object-fit: contain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Форма с адаптивностью -->
+            <section class="contact-form section">
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" 
+                               aria-describedby="email-hint email-error" required>
+                        <small id="email-hint" class="visually-hidden">
+                            Мы пришлём ответ на этот адрес
+                        </small>
+                        <span id="email-error" class="visually-hidden" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <p>&copy; 2025 Адаптивный сайт. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
